@@ -109,10 +109,5 @@ function f2(){
         else{
             f1()
             f2()
-            }
-            
-
-    console.log(text[0].meanings[1].definitions[0].definition)
-    
-    
+            }  
 }
