@@ -46,9 +46,17 @@ function setCharactersColor(){
 
     }
 }
-async function catchContent(){
 
-    function clearContent(){
+function UrlExists(link) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD',link, false);
+    http.send();
+    if (http.status != 404)
+        return true;
+    else
+        return false;
+}
+ function clearContent(){
     document.getElementById("title").innerHTML=""
     document.getElementById("phonetic").innerHTML=""
     document.getElementById("sound").innerHTML=""
@@ -61,9 +69,12 @@ async function catchContent(){
     document.getElementById("phonetic").innerHTML=""
     document.getElementById("sound").style.visibility="false"
     }
+async function catchContent(){
+
 
     clearContent()
     let link= search()
+   if( UrlExists(link)==true){
     const response= await fetch(link)
     const text=await response.json()
     document.getElementById("title").innerHTML=text[0].word //SET THE TITLE IN THE TITLE ELEMENT
@@ -110,4 +121,6 @@ function f2(){
             f1()
             f2()
             }  
+}else
+    alert("Not Founded")
 }
