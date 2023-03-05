@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+  
+    <body id="body">
+        <div id="wrapper">
+
+        <div id="topBar"> 
+            
+            <input type="checkbox" id="switch" class="checkbox" onclick="darkmode()" />
+            <label for="switch" class="toggle"></label>
+        </div>
+
+        <div id="searchbar">
+        <input id="search" type="text">
+        <button type="submit" onclick="catchContent()">Invia</button>
+        </div>
+        <br>
+        <div id="titlebar">
+        <label id="title"></label>
+        </div>
+        <br>
+        <label id="phonetic"></label>
+        <audio controls="controls" id="sound"></audio>
+        <br>
+        <label id="type1"></label>
+        <br>
+        <ol id="definition1"> 
+        </ol>
+        <label id="type2"></label>
+        <ol id="definition2"> 
+        </ol>
+        <br>
+        <label id="synonyms"></label>
+        <br>
+        <label id="antonyms"></label>
+        </div>
+    
+    </body>
+</head>
+</html>
